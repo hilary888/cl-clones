@@ -1,12 +1,13 @@
 use std::env;
 
 fn main() {
+    // Get args and save in Vector
     let args: Vec<String> = env::args().collect();
-    let input = args.get(1); 
         
-        
-    match input {
-        Some(input_string) => println!("{}", input_string),
-        None => println!(""),
+    let output = match args.get(1) {
+        Some(input_string) => input_string,
+        None => "",
     };
+    
+    println!("{}", output);
 }
